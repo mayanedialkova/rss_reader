@@ -28,8 +28,6 @@ require 'shoulda/matchers'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-config.use_transactional_fixtures = false
-
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
 
