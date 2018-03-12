@@ -1,0 +1,25 @@
+<div class='jumbotron'>
+  <p id='notice'><%= notice %></p>
+
+  <h1 class='display-3'>Rss Reader</h1>
+  <p class='lead'>
+    Showing you the latest articles from your feeds.
+    If you want to add a new feed
+    <%= link_to new_feed_path do %>click here<% end %>
+  </p>
+</div>
+
+<div class='container'>
+  <% if !@posts || @posts.empty? %>
+    <div class='row'>
+      <p>No posts available</p>
+    </div>
+  <% else %>
+    <% @posts.each do |post| %>
+      <div class='row'>
+        <p><%= link_to post.title, post.url %></p>
+      </div>
+    <% end %>
+    <%= paginate @posts %>
+  <% end %>
+</div>
