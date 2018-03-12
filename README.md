@@ -7,7 +7,8 @@
 * Database: sqlite3
 
 ## Steps needed to run the application:
-```git clone git@github.com:mayanedialkova/rss_reader.git
+```
+git clone git@github.com:mayanedialkova/rss_reader.git
 cd rss_reader
 bundle install
 rake db:create
